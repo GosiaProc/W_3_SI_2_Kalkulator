@@ -160,14 +160,14 @@ int main(int argc, char* argv[]) {
     std::cout << "a/b - dzielenie a przez b" << std::endl;
     std::cout << "a^b - a do potegi b " << std::endl;
     std::cout << "asqrtb - pierwiastkowanie a-tego stopnia liczby b" << std::endl << std::endl;
-    std::cout << "Podaj swoje dzialanie (kalkulator uwzględnia nawiasy):" <<std::endl;
+    std::cout << "Podaj swoje dzialanie (kalkulator uwzglednia nawiasy):" <<std::endl;
     std::cin >> a;
 
-    std::vector<std::string> path = parse(a);
-    for (int i = 0; i < path.size(); i++) {
-        std::cout << path[i] << " ";
+    std::vector<std::string> parsedVec = parse(a);
+    for (int i = 0; i < parsedVec.size(); i++) {
+        std::cout << parsedVec[i] << " ";
     }
-    std::cout << " MOJ WYNIK = \n\n" << calculate(path);
+    std::cout << " MOJ WYNIK = \n\n" << calculate(parsedVec);
 
 
     return 0;

@@ -144,7 +144,7 @@ double calculate(std::vector < std::string > parsedInput) {
     else {
         int i = findOperator(parsedInput);
         // std::cout << i <<" operator\n";
-        int result = calculate(stod(parsedInput[i - 1]), parsedInput[i], stod(parsedInput[i + 1]));
+        double result = calculate(stod(parsedInput[i - 1]), parsedInput[i], stod(parsedInput[i + 1]));
         parsedInput.erase(parsedInput.begin() + i);
         parsedInput.erase(parsedInput.begin() + i);
         parsedInput[i - 1] = std::to_string(result);

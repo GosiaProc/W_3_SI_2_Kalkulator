@@ -161,7 +161,7 @@ int main(int argc, char* argv[]) {
     std::cout << "a/b - dzielenie a przez b" << std::endl;
     std::cout << "a^b - a do potegi b " << std::endl;
     std::cout << "asqrtb - pierwiastkowanie a-tego stopnia liczby b" << std::endl << std::endl;
-    std::cout << "Podaj swoje dzialanie (kalkulator uwzglednia nawiasy, nie uzywaj nawiasow):" <<std::endl;
+    std::cout << "Podaj swoje dzialanie (kalkulator uwzglednia nawiasy, nie uzywaj spacji):" <<std::endl;
     std::cin >> a;
 
     std::vector<std::string> parsedVec = parse(a);

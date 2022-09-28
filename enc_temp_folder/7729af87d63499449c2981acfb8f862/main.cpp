@@ -116,8 +116,7 @@ double calculate(std::vector < std::string > parsedInput) {
 
     if (parsedInput.size() == 3) {
         return calculate(stod(parsedInput[0]), parsedInput[1], stod(parsedInput[2]));
-    } 
-    if (containBracket(parsedInput)) {
+    } if (containBracket(parsedInput)) {
         std::cout << " () \n";
 
         int open;
@@ -132,7 +131,7 @@ double calculate(std::vector < std::string > parsedInput) {
             }
         }
         std::vector<std::string> newVec(parsedInput.begin() + open + 1, parsedInput.begin() + close);
-        double result = calculate(newVec);
+        int result = calculate(newVec);
 
         for (int i = open; i < close; i++) {
             parsedInput.erase(parsedInput.begin() + open);///spr z i
@@ -161,7 +160,7 @@ int main(int argc, char* argv[]) {
     std::cout << "a/b - dzielenie a przez b" << std::endl;
     std::cout << "a^b - a do potegi b " << std::endl;
     std::cout << "asqrtb - pierwiastkowanie a-tego stopnia liczby b" << std::endl << std::endl;
-    std::cout << "Podaj swoje dzialanie (kalkulator uwzglednia nawiasy, nie uzywaj nawiasow):" <<std::endl;
+    std::cout << "Podaj swoje dzialanie (kalkulator uwzglednia nawiasy):" <<std::endl;
     std::cin >> a;
 
     std::vector<std::string> parsedVec = parse(a);
